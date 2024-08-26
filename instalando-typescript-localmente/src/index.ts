@@ -33,23 +33,23 @@ let meuProduto: ProdutoLoja = { nome: "sapato", preco: 22.0, unidades: 20000 };
 //arrays
 
 let dados: string[] = ["joao", "marcelo", "lucia"];
-let dados2: Array<string> = []
-let dados3: (string | number)[]= [];
+let dados2: Array<string> = [];
+let dados3: (string | number)[] = [];
 
 //tupla
 
-let boleto:[string, number, number] = ["213", 3, 5];
+let boleto: [string, number, number] = ["213", 3, 5];
 
 //datas
-let aniversario:Date = new Date()
-console.log(aniversario.toString())
+let aniversario: Date = new Date();
+console.log(aniversario.toString());
 
 //funcoes
 
-function addNumber(x:number,y:number):number{
-    return x+y;
+function addNumber(x: number, y: number): number {
+  return x + y;
 }
 
-function callToPhone(phone: number | string): number | string{
-    return phone;
+function callToPhone(phone: number | string): number | string {
+  return phone;
 }
