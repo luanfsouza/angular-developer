@@ -1,0 +1,21 @@
+<div>
+  <ul>
+    <li>
+      <a
+        routerLink="/"
+        routerLinkActive="activeted"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >home</a
+      >
+    </li>
+    <li>
+      <a
+        [routerLink]="['/portifolio']"
+        [routerLinkActive]="['activeted']"
+        [routerLinkActiveOptions]="{ exact: false }"
+        >portfolio</a
+      >
+    </li>
+    <li><a [routerLink]="['/portifolio/1']">portifolio/1</a></li>
+  </ul>
+</div>
