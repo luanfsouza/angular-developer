@@ -14,10 +14,15 @@ export class CardComponent {
   constructor(private route: ActivatedRoute, private navegador: Router) {
     //http://localhost:4200/portifolio/{1}
     this.route.paramMap.subscribe((res) => (this.routeId = res.get('id')));
-    console.log(this.routeId);
+    console.log("erro", this.routeId);
+    
+    this.route.firstChild?.paramMap.subscribe((res) => (this.routeId = res.get('id')));
+    console.log("acessando a rota filha params: ", this.routeId);
 
     // http://localhost:4200/portifolio/{1}?name=luan&index=123
     this.route.queryParams.subscribe((res) => console.log(res));
+    
+    this.route.firstChild?.queryParamMap.subscribe(res => console.log("acessando a rota filha token: ", res))
   }
   ngOnInit(): void {
     // setInterval(() => {
