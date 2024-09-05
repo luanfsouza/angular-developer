@@ -6,8 +6,6 @@ import { TitleComponent } from '../../components/title/title.component';
   standalone: true,
   imports: [TitleComponent],
   templateUrl: './index.component.html',
-  styleUrl: './index.component.scss'
+  styleUrl: './index.component.scss',
 })
-export class IndexComponent {
-
-}
+export class IndexComponent {}
