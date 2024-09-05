@@ -8,14 +8,14 @@
 <p>Ola, {{ pokemonEscolhido }}</p>
 <div class="card">
   <div class="card__title">
-    <h3>{{ pokemon?.name }}</h3>
+    <h3>{{ pokemon?.name | titlecase }}</h3>
   </div>
   <div class="card__body">
     <img src="{{ pokemon?.sprites?.front_default }}" alt="pokemon" />
   </div>
   <div class="card__status">
     <span class="card__status_type" *ngFor="let type of pokemon?.types">{{
-      type.type.name
+      type.type.name | uppercase
     }}</span>
   </div>
 </div>

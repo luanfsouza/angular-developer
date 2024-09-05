@@ -17,12 +17,8 @@ export class CardComponent {
   pokemon?: PokemonData;
   pokemonEscolhido: string = 'pikachu';
   pokeNameUrl: string = '';
-  constructor(
-    private service: PokemonService,
-    private http: HttpClient,
-  ) {}
+  constructor(private service: PokemonService, private http: HttpClient) {}
   ngOnInit(): void {
-  
     this.getPokemon('pikachu');
   }
   getPokemon(searchName: string) {
@@ -30,7 +26,7 @@ export class CardComponent {
       next: (resposta) => {
         this.pokemon = {
           id: resposta.id,
-          name: resposta.name.toUpperCase(),
+          name: resposta.name,
           types: resposta.types,
           sprites: resposta.sprites,
         };
